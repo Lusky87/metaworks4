@@ -23,22 +23,27 @@
     <script src="js/keditor-component-youtube.js"></script>
     <script src="js/keditor-component-object-form.js"></script>
 
-    <script src="https://unpkg.com/vue"></script>
-    <script src="https://unpkg.com/vue-material@0.7.1"></script>
-    <link rel="stylesheet" href="https://unpkg.com/vue-material@0.7.1/dist/vue-material.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<!--    <script src="https://unpkg.com/vue-material@0.7.1"></script>-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/vue-material@0.7.1/dist/vue-material.css">-->
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="http://localhost:5002/main.js"></script>
+    <script src="http://localhost:5003/vue-component.js"></script>
 
 </head>
 <body>
 
 <script>
 
-    Vue.use(VueMaterial)
+    Vue.use(Vuetify)
 
 </script>
 
-<script src="../object-grid.js"></script>
-<script src="../object-form.js"></script>
+<!--<script src="../object-grid.js"></script>-->
+<!--<script src="../object-form.js"></script>-->
 
 <div id="app">
 
@@ -79,7 +84,7 @@
             snippetsTooltipEnabled: false,
             containerSettingEnabled: true,
             containerSettingInitFunction: function (form, keditor) {
-                console.log(form, keditor);
+                console.log("containerSettingInitFunction  : ",form, keditor);
                 form.append(
                     '<div class="form-horizontal">' +
                     '   <h3>Here is Setting Container Panel!</h3>' +
@@ -87,10 +92,10 @@
                 );
             },
             containerSettingShowFunction: function (form, container, keditor) {
-                console.log(form, container, keditor);
+                console.log("containerSettingShowFunction : ",form, container, keditor);
             },
             containerSettingHideFunction: function (form, keditor) {
-                console.log(form, keditor);
+                console.log("containerSettingHideFunction : ",form, keditor);
             }
         });
 

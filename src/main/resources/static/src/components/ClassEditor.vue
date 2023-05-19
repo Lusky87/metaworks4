@@ -1,4 +1,4 @@
-<template>
+w<template>
   <object-form ref="object-form"
                java="org.uengine.uml.model.ClassDefinition"
                :data="metadata"

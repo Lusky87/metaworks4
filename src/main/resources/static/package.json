@@ -6,15 +6,18 @@
   "author": "jinyoung jang <jyjang@uengine.org>",
   "private": false,
   "scripts": {
+    "start": "http-server -p 8081",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue": "^2.3.3"
+    "http-server": "^14.1.1",
+    "vue": "^2.7.14",
+    "vue-cli": "^2.9.6"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
+    "babel-loader": "^7.1.0",
     "babel-preset-env": "^1.5.1",
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
